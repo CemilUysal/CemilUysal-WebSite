@@ -6,7 +6,10 @@ $(document).ready(function() {
 			  slideWidth: 250,
 			  slideMargin: 10,
 			  randomStart: true,
+			  speed: 3000,
+			  pagerType: "short",
+			  pagerSelector: $("#pager"),
 			  
 			});
-			
+
     	});
