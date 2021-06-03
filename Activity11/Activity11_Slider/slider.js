@@ -8,7 +8,7 @@ $(document).ready(function() {
 			  randomStart: true,
 			  speed: 3000,
 			  pagerType: "short",
-			  pagerSelector: $("#pager")
+			  pagerSelector: "#pager"
 			  
 			});
     	});
