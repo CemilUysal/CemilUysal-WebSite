@@ -3,12 +3,25 @@
         "user": "Cemil Uysal",
         "image":"../images/sucveceza.jpg",
         "name": "Suc ve Ceza",
-        "comments": "This book is realy good. I like it and I always suggest the book."
+        "comments": "This book is really good. I like it and I always suggest this book."
+    },
+    {
+        "user": "Bilge Atak",
+        "image":"../images/hamlet.jpg",
+        "name": "Hamlet",
+        "comments": "William Shakespeare is a good Biritish writer and this book most famous theater which is written by William Shakespeare."
+    },
+    {
+        "user": "Oguzhan Saman",
+        "image":"../images/devlet.jpg",
+        "name": "Devlet",
+        "comments": "Plato is one of the most famous philosohers. And, I agree with his thoughts and his thoughts are explained very fluently and clearly in this book."
     },
     {
         "user": "Cemil Uysal",
-        "image":"../images/sucveceza.jpg",
-        "name": "Suc ve Ceza",
-        "comments": "This book is realy good. I like it and I always suggest the book."
+        "image":"../images/ilyada.jpg",
+        "name": "Ilyada",
+        "comments": "This book is a book about the trojan myth. While reading this book, I felt like someone living this legend. This book took me to that era and to trojan."
     }
+    
 ]
