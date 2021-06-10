@@ -8,6 +8,14 @@ $(function(){
         renderHtml(ourData);
     };
     ourRequest.send();
+    function renderHtml(data){
+        var changingphoto = "";
+        for(i = 0; i<data.length;i++){
+            changingphoto = "#series" + (i+1)+" ";
+            $(changingphoto + "img").attr("src",data[i].image);
+            $(changingphoto + ".series-header .series-title").text(data[i].name);
+        }
+    }
     $(".series").mouseover(function(){
         var cardId = "";
         var cardId = "#"+$(this).attr("id");
@@ -70,13 +78,6 @@ $(function(){
         
     });
     
-    function renderHtml(data){
-        var changingphoto = "";
-        for(i = 0; i<data.length;i++){
-            changingphoto = "#series" + (i+1)+" ";
-            $(changingphoto + "img").attr("src",data[i].image);
-            $(changingphoto + ".series-header").text(data[i].name);
-        }
-    }
+ 
     
 });

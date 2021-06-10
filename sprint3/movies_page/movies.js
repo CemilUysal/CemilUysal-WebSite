@@ -6,6 +6,14 @@ $(function(){
         var ourData = JSON.parse(ourRequest.responseText);
         renderHtml(ourData);
     };
+    function renderHtml(data){
+        var changingphoto = "";
+        for(i = 0; i<data.length;i++){
+            changingphoto = "#movies" + (i+1)+" ";
+            $(changingphoto + "img").attr("src",data[i].image);
+            $(changingphoto + ".movies-header .movies-title").text(data[i].name);
+        }
+    }
     ourRequest.send();
     $('.owl-carousel').owlCarousel({
         loop:true,
@@ -65,14 +73,7 @@ $(function(){
         });
         
     });
-    function renderHtml(data){
-        var changingphoto = "";
-        for(i = 0; i<data.length;i++){
-            changingphoto = "#movies" + (i+1)+" ";
-            $(changingphoto + "img").attr("src",data[i].image);
-            $(changingphoto + ".movies-header").text(data[i].name);
-        }
-    }
+    
     
 
 });
