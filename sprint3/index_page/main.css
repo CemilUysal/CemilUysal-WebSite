@@ -16,7 +16,7 @@
 .main .container{
     width: 100%;
     border-radius: 30px;
-    background-image: url("images/main-back1.jpg");
+    background-image: url("../images/main-back1.jpg");
     background-repeat: no-repeat, repeat;
     
     background-size: cover;
