@@ -2,6 +2,21 @@
     {
         "type": "destan",
         "name" : "Ilyada",
-        "image": "images/ilyada.jpg"
+        "image": "../images/ilyada.jpg"
+    },
+    {
+        "type": "Roman",
+        "name" : "Suc ve Ceza",
+        "image": "../images/sucveceza.jpg"
+    },
+    {
+        "type": "Felsefe",
+        "name" : "Devlet",
+        "image": "../images/devlet.jpg"
+    },
+    {
+        "type": "Oyun",
+        "name" : "Hamlet",
+        "image": "../images/hamlet.jpg"   
     }
 ]
