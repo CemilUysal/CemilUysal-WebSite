@@ -1,4 +1,12 @@
 $(function(){
+    var ourRequest = new XMLHttpRequest();
+            
+    ourRequest.open("GET","https://cemiluysal.herokuapp.com/sprint3/books_page/books-api.php");
+    ourRequest.onload = function(){
+        var ourData = JSON.parse(ourRequest.responseText);
+        renderHtml(ourData);
+    };
+    ourRequest.send();
     $('.owl-carousel').owlCarousel({
         loop:true,
         nav:true,
@@ -57,6 +65,14 @@ $(function(){
         });
         
     });
+    function renderHtml(data){
+        var changingphoto = "";
+        for(i = 0; i<data.length;i++){
+            changingphoto = "#movies" + (i+1)+" ";
+            $(changingphoto + "img").attr("src",data[i].image);
+            $(changingphoto + ".movies-header").text(data[i].name);
+        }
+    }
     
 
 });

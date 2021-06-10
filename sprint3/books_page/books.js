@@ -1,6 +1,7 @@
 
 $(function(){   
     var booktype="";
+    
     $('.owl-carousel').owlCarousel({
         loop:true,
         nav:true,
@@ -25,30 +26,23 @@ $(function(){
         }
     });
     $(".book").click(function(){
-        booktype = $(this).text;
-        if($(this).attr("title")!= ""){
-            var imageUrl = $(this).attr("title");
-            $(".slider-bar").fadeOut(500, function(){
-			    $(".book-img").attr("src",imageUrl);
-			    $(".slider-bar").fadeIn(800);
-		    });
-        }
-        else{
+        booktype = $(this).text();
+        
             var ourRequest = new XMLHttpRequest();
             
-            ourRequest.open("GET","books-api.php");
+            ourRequest.open("GET","https://cemiluysal.herokuapp.com/sprint3/books_page/books-api.php");
             ourRequest.onload = function(){
                 var ourData = JSON.parse(ourRequest.responseText);
                 renderHtml(ourData);
             };
             ourRequest.send();
  
-        }
+        
     });
     function renderHtml(data){
         
         for(i = 0; i<data.length;i++){
-            if(data[i].type == bookname){
+            if(data[i].type == booktype){
                 var imageUrl = data[i].image;
             }
         }
