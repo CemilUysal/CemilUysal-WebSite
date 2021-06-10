@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var commentsHtml = "";
+
     var ourRequest = new XMLHttpRequest();     
     ourRequest.open("GET","https://cemiluysal.herokuapp.com/sprint3/timeline_page/timeline-api.php");
     ourRequest.onload = function(){
@@ -7,12 +8,18 @@ $(document).ready(function(){
         renderHtml(ourData);
     };
     ourRequest.send();
+    
     function renderHtml(data){
         for(i = 0 ; i<data.length; i++){
-            var cardID = "card" + i;
-            $("body").append('<div class="card my-5" > </div>');
-            $(".card").prepend('<p>Cemil</p>');
-            $()
+           commentsHtml += '<div class="card my-5"><div class="card-body">'+
+           '<img src="https://via.placeholder.com/150x150" alt="image" class="personal-image"/>'+
+           '<div class=" card comment w-75 float-end"> <div class="card-header">'+
+           '<h3 class="card-title "><a href="">' + data[i].user +'</a></h3></div>'+
+           '<div class="card-body"><h4 class="card-title"><a href="">'+data[i].name +
+           '/a></h4></div><div class="card-footer"><p class="card-text ">'+ data[i].comments+
+           '</p></div></div></div></div>';
+           $(".personal-image").attr("src", data[i].image);
+           $("body").text(commentsHtml);
         }
     }
     $(window).scroll(function(){

@@ -5,4 +5,4 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 
 header("Access-Control-Allow-Headers: X-Requested-With");
-echo file_get_contents('books.json'); // 49 MB file
+echo file_get_contents('timeline.json'); // 49 MB file
