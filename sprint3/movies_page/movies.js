@@ -1,7 +1,7 @@
 $(function(){
     var ourRequest = new XMLHttpRequest();
             
-    ourRequest.open("GET","https://cemiluysal.herokuapp.com/sprint3/books_page/books-api.php");
+    ourRequest.open("GET","../books_page/books-api.php");
     ourRequest.onload = function(){
         var ourData = JSON.parse(ourRequest.responseText);
         renderHtml(ourData);
