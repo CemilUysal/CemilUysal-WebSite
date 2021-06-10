@@ -1,5 +1,6 @@
 
 $(function(){   
+    var booktype="";
     $('.owl-carousel').owlCarousel({
         loop:true,
         nav:true,
@@ -24,6 +25,7 @@ $(function(){
         }
     });
     $(".book").click(function(){
+        booktype = $(this).text;
         if($(this).attr("title")!= ""){
             var imageUrl = $(this).attr("title");
             $(".slider-bar").fadeOut(500, function(){
@@ -44,7 +46,12 @@ $(function(){
         }
     });
     function renderHtml(data){
-        var imageUrl = data[0].image;
+        
+        for(i = 0; i<data.length;i++){
+            if(data[i].type == bookname){
+                var imageUrl = data[i].image;
+            }
+        }
 
         $(".slider-bar").fadeOut(500, function(){
 			    $(".book-img").attr("src",imageUrl);
