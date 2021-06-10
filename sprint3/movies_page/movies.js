@@ -11,7 +11,7 @@ $(function(){
         for(i = 0; i<data.length;i++){
             changingphoto = "#movies" + (i+1)+" ";
             $(changingphoto + "img").attr("src",data[i].image);
-            $(changingphoto + ".movies-header .movies-title").text(data[i].name);
+            $(changingphoto + ".movies-header .text-center").text(data[i].name);
         }
     }
     ourRequest.send();
