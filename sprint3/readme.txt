@@ -1,6 +1,7 @@
 16050111006
 Cemil Uysal
-url: https://cemiluysal.herokuapp.com/sprint3/index.html
+url: http://cemiluysal.herokuapp.com/sprint3/series_page/series.html
+note: I changed the url of the web site so sprint3 url was broken.
 Using Plugins:
 	In the Timeline page back to top.
 	In the Books page back to top and responsive slider.
