@@ -5,7 +5,7 @@ $(function(){
         
             var ourRequest = new XMLHttpRequest();
             
-            ourRequest.open("GET","https://cemiluysal.herokuapp.com/final/courses.json");
+            ourRequest.open("GET","courses.json");
             ourRequest.onload = function(){
                 var ourData = JSON.parse(ourRequest.responseText);
                 renderHtml(ourData);
@@ -15,7 +15,6 @@ $(function(){
         
     });
     function renderHtml(data){
-        
         for(i = 0; i<data.length;i++){
             if(data[i].code == code){
                 $(".code").text = data[i].code;
