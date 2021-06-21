@@ -17,8 +17,21 @@ $(function(){
     });
     function renderHtml(data){
         for(i = 0; i<data.length;i++){
+            var desc = ""
             if(data[i].code == code){
-                alert(data[i].name)
+                desc += "Description: "
+                $(".code").text(data[i].code);
+                $(".name").text(data[i].name);
+                $(".lecturer").text("Lexturer: "+data[i].lecturer);
+                $(".term").text("Term: "+data[i].term);
+                $(".meeting").text("Meeting Time: "+data[i].meeting_Time);
+                $(".expected").text("Expected Grade: "+data[i].expected_Grade);
+                for(i = 0; i<data[i].description.length;i++){
+                    desc +=+data[i].description[i]+", ";
+                    
+                }
+                desc+="was told";
+                $(".description").text(desc);
             }
         }
     }
