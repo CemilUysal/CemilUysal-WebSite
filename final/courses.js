@@ -5,7 +5,7 @@ $(function(){
         
             var ourRequest = new XMLHttpRequest();
             
-            ourRequest.open("GET","courses.json");
+            ourRequest.open("GET","https://cemiluysal.herokuapp.com/final/courses.json");
             ourRequest.onload = function(){
                 var ourData = JSON.parse(ourRequest.responseText);
                 renderHtml(ourData);
@@ -18,14 +18,11 @@ $(function(){
         
         for(i = 0; i<data.length;i++){
             if(data[i].code == code){
-                alert(data[i].name)
+                $(".code").text = data[i].code;
+                $(".name").text = data[i].name;
+                $(".lecturer").text=data[i].lecturer;
             }
         }
-
-        $(".slider-bar").fadeOut(500, function(){
-			    $(".book-img").attr("src",imageUrl);
-			    $(".slider-bar").fadeIn(800);
-		    });
     }
 
 });
