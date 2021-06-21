@@ -1,7 +1,10 @@
 $(function(){   
     var code="";
+    // every list button have class="lesson"
+    
     $(".lesson").click(function(){
-        code = $(this).text();
+        //they keep own class code for value ex. value="CENG311"
+        code = $(this).val();
         
             var ourRequest = new XMLHttpRequest();
             
@@ -10,9 +13,7 @@ $(function(){
                 var ourData = JSON.parse(ourRequest.responseText);
                 renderHtml(ourData);
             };
-            ourRequest.send();
- 
-        
+            ourRequest.send(); 
     });
     function renderHtml(data){
         for(i = 0; i<data.length;i++){
