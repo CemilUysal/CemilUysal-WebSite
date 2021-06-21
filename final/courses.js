@@ -18,9 +18,7 @@ $(function(){
     function renderHtml(data){
         for(i = 0; i<data.length;i++){
             if(data[i].code == code){
-                $(".code").text = data[i].code;
-                $(".name").text = data[i].name;
-                $(".lecturer").text=data[i].lecturer;
+                alert(data[i].name)
             }
         }
     }
