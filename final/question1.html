@@ -1,27 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<title> Question 1</title>
-	<link rel="stylesheet" type="text/css" href="tables.css">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-            crossorigin="anonymous"></script>
-    <script src="courses.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<script src="jquery-ui.min.js"></script>
+
+	<script src="js.js"></script>
+
 </head>
+
 <body>
 
-	<ul >
-		<li class="lesson"  value="CENG302"><a href="#"  >CENG302</a></li>
-		<li class="lesson"  value="CENG311"><a href="#" >CENG311</a></li>
-		<li class="lesson"  value="CENG474"><a href="#" >CENG474</a></li>
-		<li class="lesson"  value="CENG303"><a href="#" >CENG303</a></li>
-		<li class="lesson"  value="CENG325"><a href="#" >CENG325</a></li>
-	</ul>
-	<div class="course">
-		<h1 class="love">The Course U love</h1>
-		<h3 class="code">lalala</h3>
-		<h3 class="name">mamama</h3>
-		<h3 class="lecturer">cccc</h3>
+	<div class="wrapper">
+
+	   <h1>Hangman</h1>
+
+		<p>Use the text box below to guess a letter </p>
+
+		<input id="letter" type="text">
+
 	</div>
+
+    <p id="mylives"> </p>
+
+	<p id="theword"> </p>
+
+    <div class="container">
+
+      <button id="guess">Guess</button>
+
+    </div>
+
 </body>
+
 </html>

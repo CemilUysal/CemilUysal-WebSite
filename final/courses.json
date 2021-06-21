@@ -8,7 +8,8 @@
         "description":[
             "HTML","CSS","PHP","JS","JQUERY","AJAX","JSON"
         ],
-        "expected_Grade": "A"
+        "expected_Grade": "A",
+        "image":"url"
     },
     {
         "name":"Automata",
@@ -19,7 +20,8 @@
         "description":[
             "Automata1","Automata2","Automata3","Automata4"
         ],
-        "expected_Grade": "A"
+        "expected_Grade": "A",
+        "image":"url"
     },
     {
         "name":"Security",
@@ -30,7 +32,9 @@
         "description":[
             "Hash","Security1","Security3"
         ],
-        "expected_Grade": "A"
+        "expected_Grade": "A",
+        "image":"url"
+        
     },
     {
         "name":"Algorithms",
@@ -41,7 +45,8 @@
         "description":[
             "Type","BigO","LitleO","Algorithm1"
         ],
-        "expected_Grade": "A"  
+        "expected_Grade": "A" ,
+        "image":"url" 
     },
     {
         "name":"PISP",
@@ -52,6 +57,7 @@
         "description":[
             "Security","Hashing","PISP1","PISP2"
         ],
-        "expected_Grade": "A"  
+        "expected_Grade": "A"  ,
+        "image":"url"
     }
 ]
